@@ -13,7 +13,7 @@ public class LoggerManager : ILoggerManager
     public void LogError(string message)
     {
         logger.Error(message);
-    } 
+    }
     public void LogInfo(string message)
     {
         logger.Info(message);

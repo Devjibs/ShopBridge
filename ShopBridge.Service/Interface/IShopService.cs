@@ -3,7 +3,7 @@ using ShopBridge.Domain.Entities;
 
 namespace ShopBridge.Service.Interface;
 
-public interface IShopService 
+public interface IShopService
 {
     Task<ResponseModel> AddProduct(ProductCreateDto productCreate);
     Task<ResponseModel> UpdateProduct(int productId, ProductUpdateDto productUpdate);

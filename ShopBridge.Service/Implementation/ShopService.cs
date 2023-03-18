@@ -56,7 +56,8 @@ public sealed class ShopService : IShopService
 
         int affectedRows = await _repo.CreateOrUpdateAsync(
        Queries.UpdateProductQuery,
-        new{
+        new
+        {
             Id = productId,
             Name = productUpdate.Name ?? foundProduct?.Name,
             Description = productUpdate.Description ?? foundProduct?.Description,
@@ -68,7 +69,7 @@ public sealed class ShopService : IShopService
         {
             return new ResponseModel
             {
-                Message = "Product has been updated successfully", 
+                Message = "Product has been updated successfully",
                 StatusCode = (int)HttpStatusCode.NoContent
             };
         }
@@ -78,12 +79,12 @@ public sealed class ShopService : IShopService
             StatusCode = (int)HttpStatusCode.BadRequest
         };
     }
-    
-    public async Task<ResponseModel> DeleteProduct(int productId)   
+
+    public async Task<ResponseModel> DeleteProduct(int productId)
     {
         int affectedRows = await _repo.CreateOrUpdateAsync(
         Queries.DeleteProductQuery,
-        new { productId}, commandType: CommandType.Text);
+        new { productId }, commandType: CommandType.Text);
 
         if (affectedRows > 0)
         {
@@ -102,7 +103,7 @@ public sealed class ShopService : IShopService
 
     public async Task<IList<Product?>?> GetProducts(int pageNumber, int pageSize)
     {
-        var products = await _repo.GetAllAsync<Product>(Queries.GetProductsQuery, 
+        var products = await _repo.GetAllAsync<Product>(Queries.GetProductsQuery,
             new { PageNumber = pageNumber, PageSize = pageSize }, CommandType.Text);
         return products?.ToList();
     }

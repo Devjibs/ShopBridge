@@ -9,7 +9,7 @@ namespace ShopBridge.DataAccess.GenericRepository.Abstracts;
 
 public class Repository : IRepository
 {
-    private readonly ConnectionStrings _conn; 
+    private readonly ConnectionStrings _conn;
     private readonly IDbConnection _db;
 
     public Repository(IOptions<ConnectionStrings> connection)
@@ -28,7 +28,7 @@ public class Repository : IRepository
         commandType = commandType ?? CommandType.StoredProcedure;
         return _db.QueryAsync<T?>(query, obj, commandType: commandType);
     }
-  
+
     public async Task<int> CreateOrUpdateAsync<T>(string query, T? obj, IDbTransaction? dbTransaction = null, int? timeout = null, CommandType? commandType = CommandType.StoredProcedure)
     {
         try

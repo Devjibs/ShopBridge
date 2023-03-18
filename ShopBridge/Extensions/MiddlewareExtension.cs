@@ -2,7 +2,6 @@
 using NLog;
 using ShopBridge.Domain.Entities;
 using ShopBridge.Filters;
-using ShopBridge.Service.Logging;
 using System.Net;
 using ILogger = NLog.ILogger;
 
@@ -35,7 +34,7 @@ public static class MiddlewareExtension
                 });
             });
     }
-    public static void RegisterValidationFilters(this IServiceCollection services) 
+    public static void RegisterValidationFilters(this IServiceCollection services)
     {
         services.AddScoped<ValidationFilterAttribute>();
         services.AddScoped<ValidateProductExists>();

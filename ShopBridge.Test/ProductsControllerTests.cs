@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Moq;
 using ShopBridge.Controllers;
-using ShopBridge.DataAccess.Data;
 using ShopBridge.Domain.Dto;
 using ShopBridge.Domain.Entities;
 using ShopBridge.Service.Interface;
 using System.Net;
-using Xunit;
 
-namespace ShopBridge.Test; 
+namespace ShopBridge.Test;
 
 public sealed class ProductsControllerTests
 {

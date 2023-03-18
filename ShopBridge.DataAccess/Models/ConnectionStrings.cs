@@ -4,4 +4,3 @@ public record ConnectionStrings
 {
     public required string DBSqlConnection { get; set; }
 }
- 

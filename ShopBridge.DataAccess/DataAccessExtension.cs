@@ -9,8 +9,7 @@ public static class DataAccessExtension
 {
     public static void RegisterDataAccess(this IServiceCollection services)
     {
-        services.AddSingleton<ShopBridgeDbContext>(); 
+        services.AddSingleton<ShopBridgeDbContext>();
         services.AddSingleton<IRepository, Repository>();
     }
 }
- 
