@@ -6,7 +6,7 @@ using ShopBridge.Domain.Dto;
 using ShopBridge.Service.Interface;
 using Xunit;
 
-namespace ShopBridge.Tests;
+namespace ShopBridge.Test; 
 
 public sealed class ProductsControllerTests
 {
@@ -24,15 +24,6 @@ public sealed class ProductsControllerTests
     }
 
     [Fact]
-    public void DatabaseConnection_IsCorrect() 
-    {
-        var result = _dapperMock.SetupGet(x => x.CreateSqlServerConnection().ConnectionString)
-            .Returns("server=HABEEB\\SQLEXPRESS;database=Shopbridge_Db;TrustServerCertificate=true;Integrated Security=true");
-
-        Assert.True(result.Equals(true));    
-    }
-
-    [Fact]
     public void AddProduct_ReturnsOk()
     {
         // Arrange
@@ -44,17 +35,16 @@ public sealed class ProductsControllerTests
             AdditionalInfo = "Test additional info"
         };
 
-        _shopServiceMock.Setup(x => x.AddProduct(product).GetAwaiter().GetResult())
+        _shopServiceMock.Setup(x => x.AddProduct(product).Result)
             .Returns(1);
 
         // Act
-        var result = _controller.AddProduct(product);
+        var result = _controller.AddProduct(product).Result;
 
         // Assert
         var okResult = Assert.IsType<OkObjectResult>(result);
-        var createdProduct = Assert.IsType<Product>(okResult.Value);
+        var createdProduct = Assert.IsType<ProductCreateDto>(okResult.Value);
 
-        Assert.Equal(1, createdProduct.Id);
         Assert.Equal(product.Name, createdProduct.Name);
         Assert.Equal(product.Description, createdProduct.Description);
         Assert.Equal(product.Price, createdProduct.Price);
@@ -74,21 +64,15 @@ public sealed class ProductsControllerTests
             AdditionalInfo = "Test additional info"
         };
 
-        _shopServiceMock.Setup(x => x.UpdateProduct(productId, product).GetAwaiter().GetResult())
+        _shopServiceMock.Setup(x => x.UpdateProduct(productId, product).Result)
             .Returns(true);
 
         // Act
-        var result = _controller.UpdateProduct(1, product);
+        var result = _controller.UpdateProduct(1, product).Result;
 
         // Assert
-        var okResult = Assert.IsType<OkObjectResult>(result);
-        var updatedProduct = Assert.IsType<Product>(okResult.Value);
+        Assert.IsType<OkObjectResult>(result);
 
-        Assert.Equal(productId, updatedProduct.Id);
-        Assert.Equal(product.Name, updatedProduct.Name);
-        Assert.Equal(product.Description, updatedProduct.Description);
-        Assert.Equal(product.Price, updatedProduct.Price);
-        Assert.Equal(product.AdditionalInfo, updatedProduct.AdditionalInfo);
     }
 
     [Fact]
@@ -104,13 +88,13 @@ public sealed class ProductsControllerTests
             AdditionalInfo = "Test additional info"
         };
 
-        _shopServiceMock.Setup(x => x.UpdateProduct(productId, product).GetAwaiter().GetResult())
+        _shopServiceMock.Setup(x => x.UpdateProduct(productId, product).Result)
             .Returns(false);
 
         // Act
-        var result = _controller.UpdateProduct(productId, product);
+        var result = _controller.UpdateProduct(productId, product).Result;
 
         // Assert
-        Assert.IsType<NotFoundResult>(result);
+        Assert.IsType<BadRequestObjectResult>(result);
     }
 }

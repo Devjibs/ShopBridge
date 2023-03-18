@@ -23,7 +23,7 @@ public class ProductsController : ControllerBase
        var productCreation = await _shopService.AddProduct(productDto);
         if (productCreation > 0)
         {
-            return StatusCode(201, productDto);
+            return Ok(productDto);
         }
         return BadRequest(productDto);
     }
@@ -36,7 +36,7 @@ public class ProductsController : ControllerBase
        var productUpdate = await _shopService.UpdateProduct(productId, productDto); 
         if (productUpdate)
         { 
-            return StatusCode(204, productDto);
+            return Ok(productDto);
         }
         return BadRequest(productDto);
     }
@@ -48,7 +48,7 @@ public class ProductsController : ControllerBase
        var productDeleted = await _shopService.DeleteProduct(productId);
         if (productDeleted)
         {
-            return StatusCode(204);
+            return Ok();
         }
         return BadRequest();  
     }

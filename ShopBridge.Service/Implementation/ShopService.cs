@@ -23,7 +23,8 @@ public sealed class ShopService : IShopService
              {
                  Name = productCreate.Name,
                  Description = productCreate.Description,
-                 Price = productCreate.Price
+                 Price = productCreate.Price,
+                 AdditionalInfo = productCreate.AdditionalInfo
              }, commandType: CommandType.Text);
 
         return productId;
@@ -37,7 +38,8 @@ public sealed class ShopService : IShopService
             Id = productId,
             Name = productUpdate.Name,
             Description = productUpdate.Description,
-            Price = productUpdate.Price
+            Price = productUpdate.Price,
+            AdditionalInfo = productUpdate.AdditionalInfo
         }, commandType: CommandType.Text);
 
         return affectedRows > 0; 

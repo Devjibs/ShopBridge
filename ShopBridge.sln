@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBridge.DataAccess", "Sh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBridge.Service", "ShopBridge.Service\ShopBridge.Service.csproj", "{B9107052-7855-43FF-B1FE-6EDB89DF5311}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBridge.Tests", "ShopBridge.Tests\ShopBridge.Tests.csproj", "{23192B75-EB95-42D8-A841-20855DA5DC36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBridge.Test", "ShopBridge.Test\ShopBridge.Test.csproj", "{0C523B21-B198-4831-B80D-DCC311A019BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{B9107052-7855-43FF-B1FE-6EDB89DF5311}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9107052-7855-43FF-B1FE-6EDB89DF5311}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9107052-7855-43FF-B1FE-6EDB89DF5311}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23192B75-EB95-42D8-A841-20855DA5DC36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23192B75-EB95-42D8-A841-20855DA5DC36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23192B75-EB95-42D8-A841-20855DA5DC36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23192B75-EB95-42D8-A841-20855DA5DC36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C523B21-B198-4831-B80D-DCC311A019BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C523B21-B198-4831-B80D-DCC311A019BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C523B21-B198-4831-B80D-DCC311A019BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C523B21-B198-4831-B80D-DCC311A019BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
