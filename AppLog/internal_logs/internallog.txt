@@ -1,0 +1,271 @@
+2023-03-18 00:59:30.2381 Info Message Template Auto Format enabled
+2023-03-18 00:59:31.1664 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-03-18 00:59:31.3644 Debug Setting 'NLog.Targets.FileTarget.Name' to 'logfile'
+2023-03-18 00:59:31.3644 Debug Setting 'NLog.Targets.FileTarget.FileName' to 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 00:59:31.3755 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 00:59:31.3755 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-03-18 00:59:31.3755 Debug Setting 'NLog.Targets.FileTarget.Layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 00:59:31.3755 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 00:59:31.3839 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-03-18 00:59:31.3839 Debug Setting 'NLog.LayoutRenderers.LevelLayoutRenderer.Uppercase' to 'true'
+2023-03-18 00:59:31.3839 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 00:59:31.3839 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-03-18 00:59:31.3839 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 00:59:31.3839 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-03-18 00:59:31.3839 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2023-03-18 00:59:31.3839 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-03-18 00:59:31.3839 Trace ParseRulesElement
+2023-03-18 00:59:31.4204 Debug Watching file-filter 'nlog.config' in directory: C:\ThinkBridge\ShopBridge\ShopBridge
+2023-03-18 00:59:31.4204 Debug --- NLog configuration dump ---
+2023-03-18 00:59:31.4204 Debug Targets:
+2023-03-18 00:59:31.4310 Debug FileTarget(Name=logfile)
+2023-03-18 00:59:31.4310 Debug Rules:
+2023-03-18 00:59:31.4310 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-03-18 00:59:31.4310 Debug --- End of NLog configuration dump ---
+2023-03-18 00:59:31.4310 Trace FindReachableObject<System.Object>:
+2023-03-18 00:59:31.4310 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-03-18 00:59:31.4310 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-03-18 00:59:31.4310 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-03-18 00:59:31.4310 Trace   Scanning Property FileName 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-03-18 00:59:31.4473 Trace   Scanning SimpleLayout 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 00:59:31.4473 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 00:59:31.4473 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 00:59:31.4473 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-03-18 00:59:31.4473 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 00:59:31.4473 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-03-18 00:59:31.4473 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-03-18 00:59:31.4473 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 00:59:31.4473 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 00:59:31.4473 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-03-18 00:59:31.4473 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 00:59:31.4473 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-03-18 00:59:31.4473 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 00:59:31.4473 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-03-18 00:59:31.4473 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-03-18 00:59:31.4473 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-03-18 00:59:31.4473 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\ThinkBridge\ShopBridge\ShopBridge\nlog.config
+2023-03-18 00:59:31.4473 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-03-18 00:59:31.4728 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-03-18 00:59:31.4728 Trace Initializing Layout Renderer: ${message}
+2023-03-18 00:59:31.4728 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 00:59:31.4728 Trace Initializing Layout Renderer: ${level}
+2023-03-18 00:59:31.4728 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 00:59:31.4827 Trace Initializing Layout Renderer: ${longdate}
+2023-03-18 00:59:31.4827 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-03-18 00:59:31.4827 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 00:59:31.4827 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 00:59:31.4827 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 00:59:31.4827 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-03-18 00:59:31.4827 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 00:59:31.4957 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-03-18 00:59:31.4957 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 00:59:31.4957 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-03-18 00:59:31.4957 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 00:59:31.4957 Trace Initializing Layout Renderer: ${shortdate}
+2023-03-18 00:59:31.4957 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 00:59:31.4957 Trace Initializing c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt
+2023-03-18 00:59:31.4957 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 00:59:31.4957 Trace Scanning SimpleLayout 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 00:59:31.4957 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 00:59:31.4957 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 00:59:31.4957 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-03-18 00:59:31.4957 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 00:59:31.5091 Trace Initializing FileTarget(Name=logfile)
+2023-03-18 00:59:31.5091 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-03-18 00:59:31.5091 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-03-18 00:59:31.5091 Trace  Scanning Property FileName 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-03-18 00:59:31.5091 Trace  Scanning SimpleLayout 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 00:59:31.5091 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-03-18 00:59:31.5091 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-03-18 00:59:31.5091 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 00:59:31.5091 Trace FileTarget(Name=logfile) has 2 layouts
+2023-03-18 00:59:31.5091 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-03-18 01:02:47.3939 Info Message Template Auto Format enabled
+2023-03-18 01:02:47.4595 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-03-18 01:02:47.6768 Debug Setting 'NLog.Targets.FileTarget.Name' to 'logfile'
+2023-03-18 01:02:47.6825 Debug Setting 'NLog.Targets.FileTarget.FileName' to 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 01:02:47.7001 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:02:47.7001 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-03-18 01:02:47.7001 Debug Setting 'NLog.Targets.FileTarget.Layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 01:02:47.7001 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:02:47.7128 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-03-18 01:02:47.7128 Debug Setting 'NLog.LayoutRenderers.LevelLayoutRenderer.Uppercase' to 'true'
+2023-03-18 01:02:47.7128 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:02:47.7128 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-03-18 01:02:47.7128 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:02:47.7128 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-03-18 01:02:47.7128 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2023-03-18 01:02:47.7128 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-03-18 01:02:47.7128 Trace ParseRulesElement
+2023-03-18 01:02:47.7459 Debug Watching file-filter 'nlog.config' in directory: C:\ThinkBridge\ShopBridge\ShopBridge
+2023-03-18 01:02:47.7459 Debug --- NLog configuration dump ---
+2023-03-18 01:02:47.7459 Debug Targets:
+2023-03-18 01:02:47.7459 Debug FileTarget(Name=logfile)
+2023-03-18 01:02:47.7459 Debug Rules:
+2023-03-18 01:02:47.7459 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-03-18 01:02:47.7459 Debug --- End of NLog configuration dump ---
+2023-03-18 01:02:47.7459 Trace FindReachableObject<System.Object>:
+2023-03-18 01:02:47.7459 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-03-18 01:02:47.7639 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-03-18 01:02:47.7639 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-03-18 01:02:47.7639 Trace   Scanning Property FileName 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-03-18 01:02:47.7639 Trace   Scanning SimpleLayout 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 01:02:47.7639 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 01:02:47.7639 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:02:47.7639 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-03-18 01:02:47.7639 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:02:47.7639 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-03-18 01:02:47.7766 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-03-18 01:02:47.7766 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 01:02:47.7766 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 01:02:47.7766 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-03-18 01:02:47.7766 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:02:47.7766 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-03-18 01:02:47.7766 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:02:47.7766 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-03-18 01:02:47.7766 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-03-18 01:02:47.7766 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-03-18 01:02:47.7929 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\ThinkBridge\ShopBridge\ShopBridge\nlog.config
+2023-03-18 01:02:47.7929 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-03-18 01:02:47.7929 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-03-18 01:02:47.8174 Trace Initializing Layout Renderer: ${message}
+2023-03-18 01:02:47.8174 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 01:02:47.8174 Trace Initializing Layout Renderer: ${level}
+2023-03-18 01:02:47.8174 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 01:02:47.8174 Trace Initializing Layout Renderer: ${longdate}
+2023-03-18 01:02:47.8232 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-03-18 01:02:47.8232 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:02:47.8232 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 01:02:47.8232 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 01:02:47.8232 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-03-18 01:02:47.8232 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:02:47.8232 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-03-18 01:02:47.8232 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:02:47.8232 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-03-18 01:02:47.8232 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 01:02:47.8397 Trace Initializing Layout Renderer: ${shortdate}
+2023-03-18 01:02:47.8397 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 01:02:47.8397 Trace Initializing c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt
+2023-03-18 01:02:47.8397 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:02:47.8397 Trace Scanning SimpleLayout 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 01:02:47.8397 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 01:02:47.8397 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:02:47.8397 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-03-18 01:02:47.8397 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:02:47.8397 Trace Initializing FileTarget(Name=logfile)
+2023-03-18 01:02:47.8397 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-03-18 01:02:47.8397 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-03-18 01:02:47.8397 Trace  Scanning Property FileName 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-03-18 01:02:47.8397 Trace  Scanning SimpleLayout 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 01:02:47.8397 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-03-18 01:02:47.8397 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-03-18 01:02:47.8397 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 01:02:47.8397 Trace FileTarget(Name=logfile) has 2 layouts
+2023-03-18 01:02:47.8541 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-03-18 01:02:48.3635 Debug Targets configured when LogLevel >= Debug for Logger: ShopBridge.Extensions.MiddlewareExtension
+2023-03-18 01:02:48.3635 Debug Logger ShopBridge.Extensions.MiddlewareExtension [Debug] => logfile
+2023-03-18 01:02:48.3635 Debug Logger ShopBridge.Extensions.MiddlewareExtension [Info] => logfile
+2023-03-18 01:02:48.3635 Debug Logger ShopBridge.Extensions.MiddlewareExtension [Warn] => logfile
+2023-03-18 01:02:48.3635 Debug Logger ShopBridge.Extensions.MiddlewareExtension [Error] => logfile
+2023-03-18 01:02:48.3635 Debug Logger ShopBridge.Extensions.MiddlewareExtension [Fatal] => logfile
+2023-03-18 01:03:08.8857 Debug FileTarget(Name=logfile): Preparing for new file: 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\2023-03-18_logfile.txt'
+2023-03-18 01:03:08.8999 Debug FileTarget(Name=logfile): Creating file appender: 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\2023-03-18_logfile.txt'
+2023-03-18 01:03:08.8999 Trace FileTarget(Name=logfile): Opening c:\\ThinkBridge\\ShopBridge/AppLog\logs\2023-03-18_logfile.txt with allowFileSharedWriting=False
+2023-03-18 01:03:09.0478 Debug FileTarget(Name=logfile): DirectoryNotFoundException - Attempting to create directory for FileName: c:\\ThinkBridge\\ShopBridge/AppLog\logs\2023-03-18_logfile.txt
+2023-03-18 01:05:24.9488 Info Message Template Auto Format enabled
+2023-03-18 01:05:24.9846 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-03-18 01:05:25.3455 Debug Setting 'NLog.Targets.FileTarget.Name' to 'logfile'
+2023-03-18 01:05:25.3455 Debug Setting 'NLog.Targets.FileTarget.FileName' to 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 01:05:25.3619 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:05:25.3619 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-03-18 01:05:25.3682 Debug Setting 'NLog.Targets.FileTarget.Layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 01:05:25.3682 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:05:25.3682 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-03-18 01:05:25.3682 Debug Setting 'NLog.LayoutRenderers.LevelLayoutRenderer.Uppercase' to 'true'
+2023-03-18 01:05:25.3682 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:05:25.3682 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-03-18 01:05:25.3682 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:05:25.3682 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-03-18 01:05:25.3682 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2023-03-18 01:05:25.3682 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-03-18 01:05:25.3682 Trace ParseRulesElement
+2023-03-18 01:05:25.4088 Debug Watching file-filter 'nlog.config' in directory: C:\ThinkBridge\ShopBridge\ShopBridge
+2023-03-18 01:05:25.4088 Debug --- NLog configuration dump ---
+2023-03-18 01:05:25.4088 Debug Targets:
+2023-03-18 01:05:25.4088 Debug FileTarget(Name=logfile)
+2023-03-18 01:05:25.4319 Debug Rules:
+2023-03-18 01:05:25.4319 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-03-18 01:05:25.4319 Debug --- End of NLog configuration dump ---
+2023-03-18 01:05:25.4319 Trace FindReachableObject<System.Object>:
+2023-03-18 01:05:25.4319 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-03-18 01:05:25.4492 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-03-18 01:05:25.4492 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-03-18 01:05:25.4492 Trace   Scanning Property FileName 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-03-18 01:05:25.4492 Trace   Scanning SimpleLayout 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 01:05:25.4492 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 01:05:25.4492 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:05:25.4492 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-03-18 01:05:25.4492 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:05:25.4492 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-03-18 01:05:25.4492 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-03-18 01:05:25.4492 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 01:05:25.4622 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 01:05:25.4622 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-03-18 01:05:25.4622 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:05:25.4622 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-03-18 01:05:25.4622 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:05:25.4622 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-03-18 01:05:25.4622 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-03-18 01:05:25.4622 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-03-18 01:05:25.4622 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\ThinkBridge\ShopBridge\ShopBridge\nlog.config
+2023-03-18 01:05:25.4622 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-03-18 01:05:25.4790 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-03-18 01:05:25.4790 Trace Initializing Layout Renderer: ${message}
+2023-03-18 01:05:25.4790 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 01:05:25.4790 Trace Initializing Layout Renderer: ${level}
+2023-03-18 01:05:25.4790 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 01:05:25.4790 Trace Initializing Layout Renderer: ${longdate}
+2023-03-18 01:05:25.4790 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-03-18 01:05:25.4790 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:05:25.4790 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 01:05:25.4790 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 01:05:25.4790 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-03-18 01:05:25.4790 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:05:25.4790 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-03-18 01:05:25.4790 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:05:25.4790 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-03-18 01:05:25.4790 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 01:05:25.4790 Trace Initializing Layout Renderer: ${shortdate}
+2023-03-18 01:05:25.4790 Trace Initializing Layout Renderer: ${literal}
+2023-03-18 01:05:25.4790 Trace Initializing c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt
+2023-03-18 01:05:25.4790 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-03-18 01:05:25.4790 Trace Scanning SimpleLayout 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 01:05:25.4939 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-03-18 01:05:25.4939 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:05:25.4939 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-03-18 01:05:25.4939 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-03-18 01:05:25.4939 Trace Initializing FileTarget(Name=logfile)
+2023-03-18 01:05:25.4939 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-03-18 01:05:25.4939 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-03-18 01:05:25.4939 Trace  Scanning Property FileName 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-03-18 01:05:25.4939 Trace  Scanning SimpleLayout 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\${shortdate}_logfile.txt'
+2023-03-18 01:05:25.4939 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-03-18 01:05:25.4939 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-03-18 01:05:25.4939 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-03-18 01:05:25.4939 Trace FileTarget(Name=logfile) has 2 layouts
+2023-03-18 01:05:25.4939 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-03-18 01:05:26.1788 Debug Targets configured when LogLevel >= Debug for Logger: ShopBridge.Extensions.MiddlewareExtension
+2023-03-18 01:05:26.1788 Debug Logger ShopBridge.Extensions.MiddlewareExtension [Debug] => logfile
+2023-03-18 01:05:26.1788 Debug Logger ShopBridge.Extensions.MiddlewareExtension [Info] => logfile
+2023-03-18 01:05:26.1788 Debug Logger ShopBridge.Extensions.MiddlewareExtension [Warn] => logfile
+2023-03-18 01:05:26.1788 Debug Logger ShopBridge.Extensions.MiddlewareExtension [Error] => logfile
+2023-03-18 01:05:26.1811 Debug Logger ShopBridge.Extensions.MiddlewareExtension [Fatal] => logfile
+2023-03-18 01:05:43.0626 Debug Targets configured when LogLevel >= Debug for Logger: ShopBridge.Service.Logging.LoggerManager
+2023-03-18 01:05:43.0626 Debug Logger ShopBridge.Service.Logging.LoggerManager [Debug] => logfile
+2023-03-18 01:05:43.0626 Debug Logger ShopBridge.Service.Logging.LoggerManager [Info] => logfile
+2023-03-18 01:05:43.0626 Debug Logger ShopBridge.Service.Logging.LoggerManager [Warn] => logfile
+2023-03-18 01:05:43.0626 Debug Logger ShopBridge.Service.Logging.LoggerManager [Error] => logfile
+2023-03-18 01:05:43.0626 Debug Logger ShopBridge.Service.Logging.LoggerManager [Fatal] => logfile
+2023-03-18 01:05:43.1033 Debug FileTarget(Name=logfile): Preparing for new file: 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\2023-03-18_logfile.txt'
+2023-03-18 01:05:43.1033 Debug FileTarget(Name=logfile): Creating file appender: 'c:\\ThinkBridge\\ShopBridge/AppLog\logs\2023-03-18_logfile.txt'
+2023-03-18 01:05:43.1033 Trace FileTarget(Name=logfile): Opening c:\\ThinkBridge\\ShopBridge/AppLog\logs\2023-03-18_logfile.txt with allowFileSharedWriting=False
