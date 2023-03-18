@@ -17,9 +17,9 @@ public class ValidateProductExists : IAsyncActionFilter
         _repository = repository; _logger = logger;
     }
 
-    public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+    public async Task OnActionExecutionAsync(ActionExecutingContext? context, ActionExecutionDelegate next)
     {
-        var id = (int)context.ActionArguments[context.ActionArguments.Keys.Where(x => x.Equals("productId") || x.Equals("productId")).SingleOrDefault()];
+        int id = (int)context?.ActionArguments?[context?.ActionArguments?.Keys?.Where(x => x.Equals("productId") || x.Equals("productId"))?.SingleOrDefault()]; 
 
         var product = await _repository.GetAsync<Product>("SELECT * FROM Product WHERE Id = @id", new { id }, commandType: System.Data.CommandType.Text);
         if (product is null)
@@ -34,7 +34,7 @@ public class ValidateProductExists : IAsyncActionFilter
         }
         else
         {
-            context.HttpContext.Items.Add("product", product); 
+            context?.HttpContext.Items.Add("product", product); 
             await next();
         }
     }

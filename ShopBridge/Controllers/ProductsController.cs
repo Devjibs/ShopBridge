@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using ShopBridge.Domain.Dto;
 using ShopBridge.Filters;
-using ShopBridge.Service.Implementation;
 using ShopBridge.Service.Interface;
 
 namespace ShopBridge.Controllers;
@@ -11,12 +10,10 @@ namespace ShopBridge.Controllers;
 public class ProductsController : ControllerBase
 {
     private  readonly IShopService _shopService;
-    private readonly ILogger<ShopService> _logger;
 
-    public ProductsController(IShopService shopService, ILogger<ShopService> logger)
+    public ProductsController(IShopService shopService)
     {
         _shopService = shopService;
-        _logger = logger;
     }
 
     [HttpPost, Route("AddProduct")]

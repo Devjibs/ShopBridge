@@ -28,12 +28,6 @@ public class Repository : IRepository
         commandType = commandType ?? CommandType.StoredProcedure;
         return _db.QueryAsync<T?>(query, obj, commandType: commandType);
     }
-    public Task<SqlMapper.GridReader> GetMultipleAsync(string query, object? obj, CommandType? commandType)
-    {
-        commandType = commandType ?? CommandType.StoredProcedure;
-        return _db.QueryMultipleAsync(query, obj, commandType: commandType);
-    }
-
   
     public async Task<int> CreateOrUpdateAsync<T>(string query, T? obj, IDbTransaction? dbTransaction = null, int? timeout = null, CommandType? commandType = CommandType.StoredProcedure)
     {
