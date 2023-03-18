@@ -54,9 +54,9 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPost, Route("GetProducts")]
-    public async Task<IActionResult> GetProducts(int pageNo = 1, int pageSize = 10)
+    public async Task<IActionResult> GetProducts(string? search = null, int pageNo = 1, int pageSize = 10) 
     {
-        var products = await _shopService.GetProducts(pageNo, pageSize);
+        var products = await _shopService.GetProducts(search, pageNo, pageSize);
         return products is null ? NotFound(products) : Ok(products);
     }
 }

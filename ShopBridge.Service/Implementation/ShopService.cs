@@ -101,10 +101,10 @@ public sealed class ShopService : IShopService
         }; ;
     }
 
-    public async Task<IList<Product?>?> GetProducts(int pageNumber, int pageSize)
+    public async Task<IList<Product?>?> GetProducts(string? search = null, int pageNumber = 1, int pageSize = 10)
     {
         var products = await _repo.GetAllAsync<Product>(Queries.GetProductsQuery,
-            new { PageNumber = pageNumber, PageSize = pageSize }, CommandType.Text);
+            new { ProductName = search, PageNumber = pageNumber, PageSize = pageSize }, CommandType.Text);
         return products?.ToList();
     }
 
