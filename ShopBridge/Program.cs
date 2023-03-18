@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
+builder.Services.AddHttpContextAccessor();
 builder.Services.RegisterDataAccess();
 builder.Services.RegisterService();
 builder.Services.RegisterValidationFilters();

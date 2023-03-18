@@ -11,5 +11,6 @@ public static class ServiceExtension
     {
         services.AddScoped<ILoggerManager, LoggerManager>();
         services.AddScoped<IShopService, ShopService>();
+        services.AddScoped<IImageService, ImageService>();
     }
 }

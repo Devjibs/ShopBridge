@@ -1,12 +1,13 @@
 ﻿using ShopBridge.Domain.Dto;
+using ShopBridge.Domain.Entities;
 
 namespace ShopBridge.Service.Interface;
 
 public interface IShopService 
 {
-    Task<int> AddProduct(ProductCreateDto productCreate);
-    Task<bool> UpdateProduct(int productId, ProductUpdateDto productUpdate);
+    Task<ResponseModel> AddProduct(ProductCreateDto productCreate);
+    Task<ResponseModel> UpdateProduct(int productId, ProductUpdateDto productUpdate);
     Task<IList<Product?>?> GetProducts(int pageNumber, int pageSize);
-    Task<bool> DeleteProduct(int productId);
+    Task<ResponseModel> DeleteProduct(int productId);
 
 }

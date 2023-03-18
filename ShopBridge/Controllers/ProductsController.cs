@@ -18,27 +18,27 @@ public class ProductsController : ControllerBase
 
     [HttpPost, Route("AddProduct")]
     [ServiceFilter(typeof(ValidationFilterAttribute))]
-    public async Task<IActionResult> AddProduct(ProductCreateDto productDto) 
+    public async Task<IActionResult> AddProduct([FromForm] ProductCreateDto productDto) 
     {
        var productCreation = await _shopService.AddProduct(productDto);
-        if (productCreation > 0)
+        if (productCreation.StatusCode == 200)
         {
-            return Ok(productDto);
+            return Ok(productCreation);
         }
-        return BadRequest(productDto);
+        return BadRequest(productCreation);
     }
     
     [HttpPut, Route("UpdateProduct")]
     [ServiceFilter(typeof(ValidationFilterAttribute))]
     [ServiceFilter(typeof(ValidateProductExists))]
-    public async Task<IActionResult> UpdateProduct(int productId, ProductUpdateDto productDto) 
+    public async Task<IActionResult> UpdateProduct(int productId, [FromForm] ProductUpdateDto productDto) 
     {
        var productUpdate = await _shopService.UpdateProduct(productId, productDto); 
-        if (productUpdate)
+        if (productUpdate.StatusCode == 204)
         { 
-            return Ok(productDto);
+            return Ok(productUpdate);
         }
-        return BadRequest(productDto);
+        return BadRequest(productUpdate);
     }
     
     [HttpDelete, Route("DeleteProduct")]
@@ -46,11 +46,11 @@ public class ProductsController : ControllerBase
     public async Task<IActionResult> DeleteProduct(int productId) 
     {
        var productDeleted = await _shopService.DeleteProduct(productId);
-        if (productDeleted)
+        if (productDeleted.StatusCode == 204)
         {
-            return Ok();
+            return Ok(productDeleted);
         }
-        return BadRequest();  
+        return BadRequest(productDeleted);  
     }
      
     [HttpPost, Route("GetProducts")] 

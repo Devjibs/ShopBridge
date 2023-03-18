@@ -2,11 +2,11 @@
 
 public static class Queries
 {
-    public const string AddProductQuery = "INSERT INTO Product (Name, Description, Price, IsDeleted) " +
-            "VALUES (@Name, @Description, @Price, @AdditionalInfo, 0); " +
+    public const string AddProductQuery = "INSERT INTO Product (Name, Description, Price, ProductImage, IsDeleted) " +
+            "VALUES (@Name, @Description, @Price, @ProductImage, 0); " +
             "SELECT CAST(SCOPE_IDENTITY() as int)";
 
-    public const string UpdateProductQuery = "UPDATE Product SET Name = @Name, Description = @Description, Price = @Price, AdditionalInfo = @AdditionalInfo " +
+    public const string UpdateProductQuery = "UPDATE Product SET Name = @Name, Description = @Description, Price = @Price, ProductImage = @ProductImage " +
         "WHERE Id = @Id";
 
     public const string DeleteProductQuery = "UPDATE Product SET IsDeleted = 1 WHERE Id = @productId AND IsDeleted = 0"; 

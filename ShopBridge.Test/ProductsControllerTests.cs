@@ -3,7 +3,9 @@ using Moq;
 using ShopBridge.Controllers;
 using ShopBridge.DataAccess.Data;
 using ShopBridge.Domain.Dto;
+using ShopBridge.Domain.Entities;
 using ShopBridge.Service.Interface;
+using System.Net;
 using Xunit;
 
 namespace ShopBridge.Test; 
@@ -12,12 +14,9 @@ public sealed class ProductsControllerTests
 {
     private readonly ProductsController _controller;
     private readonly Mock<IShopService> _shopServiceMock;
-    private readonly Mock<ShopBridgeDbContext> _dapperMock;
 
     public ProductsControllerTests()
     {
-        _dapperMock = new Mock<ShopBridgeDbContext>();
-
         _shopServiceMock = new Mock<IShopService>();
         _controller = new ProductsController(_shopServiceMock.Object);
 
@@ -31,24 +30,22 @@ public sealed class ProductsControllerTests
         {
             Name = "Test Product",
             Description = "This is a test product.",
-            Price = 10.0m,
-            AdditionalInfo = "Test additional info"
+            Price = 10.0m
         };
 
         _shopServiceMock.Setup(x => x.AddProduct(product).Result)
-            .Returns(1);
+            .Returns(new ResponseModel
+            {
+                Message = product.Name + " has been added to the inventory successfully",
+                StatusCode = (int)HttpStatusCode.OK
+            });
 
         // Act
         var result = _controller.AddProduct(product).Result;
 
         // Assert
         var okResult = Assert.IsType<OkObjectResult>(result);
-        var createdProduct = Assert.IsType<ProductCreateDto>(okResult.Value);
-
-        Assert.Equal(product.Name, createdProduct.Name);
-        Assert.Equal(product.Description, createdProduct.Description);
-        Assert.Equal(product.Price, createdProduct.Price);
-        Assert.Equal(product.AdditionalInfo, createdProduct.AdditionalInfo);
+        Assert.IsType<ResponseModel>(okResult.Value);
     }
 
     [Fact]
@@ -60,12 +57,15 @@ public sealed class ProductsControllerTests
         {
             Name = "Test Product",
             Description = "This is a test product.",
-            Price = 10.0m,
-            AdditionalInfo = "Test additional info"
+            Price = 10.0m
         };
 
         _shopServiceMock.Setup(x => x.UpdateProduct(productId, product).Result)
-            .Returns(true);
+            .Returns(new ResponseModel
+            {
+                Message = "Product has been updated successfully",
+                StatusCode = (int)HttpStatusCode.NoContent
+            });
 
         // Act
         var result = _controller.UpdateProduct(1, product).Result;
@@ -84,12 +84,15 @@ public sealed class ProductsControllerTests
         {
             Name = "Test Product",
             Description = "This is a test product.",
-            Price = 10.0m,
-            AdditionalInfo = "Test additional info"
+            Price = 10.0m
         };
 
         _shopServiceMock.Setup(x => x.UpdateProduct(productId, product).Result)
-            .Returns(false);
+            .Returns(new ResponseModel
+            {
+                Message = "Unable to update product",
+                StatusCode = (int)HttpStatusCode.BadRequest
+            });
 
         // Act
         var result = _controller.UpdateProduct(productId, product).Result;
