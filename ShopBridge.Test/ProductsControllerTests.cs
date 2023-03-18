@@ -12,11 +12,11 @@ public sealed class ProductsControllerTests
 {
     private readonly ProductsController _controller;
     private readonly Mock<IShopService> _shopServiceMock;
-    private readonly Mock<DapperContext> _dapperMock;
+    private readonly Mock<ShopBridgeDbContext> _dapperMock;
 
     public ProductsControllerTests()
     {
-        _dapperMock = new Mock<DapperContext>();
+        _dapperMock = new Mock<ShopBridgeDbContext>();
 
         _shopServiceMock = new Mock<IShopService>();
         _controller = new ProductsController(_shopServiceMock.Object);

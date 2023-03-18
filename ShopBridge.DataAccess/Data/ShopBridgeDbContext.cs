@@ -5,11 +5,11 @@ using System.Data.SqlClient;
 
 namespace ShopBridge.DataAccess.Data;
 
-public class DapperContext
+public class ShopBridgeDbContext
 {
     private readonly ConnectionStrings _connection;
 
-    public DapperContext(IOptions<ConnectionStrings> connection)
+    public ShopBridgeDbContext(IOptions<ConnectionStrings> connection)
     {
         _connection = connection.Value;
     }
